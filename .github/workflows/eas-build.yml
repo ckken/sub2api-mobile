@@ -49,7 +49,7 @@ jobs:
         run: npm ci
 
       - name: Trigger EAS build and wait for completion
-        run: npx eas build --non-interactive --wait --json --profile "${{ inputs.profile }}" --platform "${{ inputs.platform }}" > eas-build.json
+        run: eas build --non-interactive --wait --json --profile "${{ inputs.profile }}" --platform "${{ inputs.platform }}" > eas-build.json
 
       - name: Publish build links in workflow summary
         run: |
