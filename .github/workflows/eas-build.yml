@@ -27,8 +27,8 @@ jobs:
     permissions:
       contents: read
     env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
